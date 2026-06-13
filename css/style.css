@@ -351,8 +351,8 @@
     .logo-company .lc-name { font-size: 13px; font-weight: 700; color: #0F1B2E; letter-spacing: .02em; white-space: nowrap; }
     .logo-company .lc-sub { font-size: 8px; font-weight: 500; color: #1D2B4F; opacity: .5; letter-spacing: .06em; white-space: nowrap; }
     .photo-frame {
-      position: absolute; top: 70px; left: 50%; transform: translateX(-50%);
-      width: 110px; height: 110px; border-radius: 20px;
+      position: absolute; top: 56px; left: 50%; transform: translateX(-50%);
+      width: 144px; height: 144px; border-radius: 28px;
       border: 3px solid #1F467D;
       box-shadow: 0 0 0 3px #fff, 0 0 0 5px rgba(31,70,125,.15);
       background: #fff; overflow: hidden; z-index: 10;
@@ -363,8 +363,8 @@
       background: linear-gradient(135deg, #1F467D 0%, #3a6bb5 100%);
       font-size: 26px; font-weight: 800; color: #fff; letter-spacing: -1px;
     }
-    .photo-accent { position: absolute; top: 70px; left: calc(50% + 43px); width: 10px; height: 10px; border-radius: 50%; background: #E55A00; z-index: 11; box-shadow: 0 0 0 3px rgba(229,90,0,.22); }
-    .card-body { position: absolute; top: 208px; left: 0; right: 0; bottom: 0; display: flex; flex-direction: column; align-items: center; padding: 0 16px 14px; }
+    .photo-accent { position: absolute; top: 56px; left: calc(50% + 56px); width: 12px; height: 12px; border-radius: 50%; background: #E55A00; z-index: 11; box-shadow: 0 0 0 3px rgba(229,90,0,.22); }
+    .card-body { position: absolute; top: 236px; left: 0; right: 0; bottom: 0; display: flex; flex-direction: column; align-items: center; padding: 0 16px 14px; }
     .divider { position: absolute; top: 138px; left: 0; right: 0; width: 100%; height: 4px; background: linear-gradient(90deg,#E55A00 0%,#E55A00 25%,#fff 50%,#1F467D 75%,#1F467D 100%); z-index: 5; }
     .emp-id-badge { display: flex; align-items: center; gap: 6px; background: rgba(31,70,125,.07); border-radius: 30px; padding: 3px 12px; margin-bottom: 5px; }
     .id-label { font-size: 8.5px; font-weight: 600; color: #1D2B4F; opacity: .5; text-transform: uppercase; letter-spacing: .12em; }

@@ -290,8 +290,8 @@ async function printPreview() {
         page-break-inside: avoid;
         box-sizing: border-box;
         display: grid;
-        grid-template-columns: repeat(4, 54.5mm);
-        grid-template-rows: repeat(2, 87.5mm);
+        grid-template-columns: repeat(4, 60.5mm);
+        grid-template-rows: repeat(2, 98mm);
         justify-content: center;
         align-content: center;
         gap: 2px; /* 2px gap between cards for easy cutting */
@@ -304,8 +304,8 @@ async function printPreview() {
         body { background: #fff; }
       }
       .card-wrapper {
-        width: 54.5mm;   /* ~206px */
-        height: 87.5mm;  /* ~331px */
+        width: 60.5mm;   /* Increased for larger print */
+        height: 98mm;    /* Increased for larger print */
         box-sizing: border-box;
         position: relative;
         overflow: hidden;
@@ -316,8 +316,8 @@ async function printPreview() {
       .id-card {
         position: absolute;
         top: 0; left: 0;
-        /* 320px * 0.644 = 206px ≈ 54.5mm  |  518px * 0.644 = 333px ≈ 87.5mm */
-        transform: scale(0.644);
+        /* 320px * 0.715 = 228.8px ≈ 60.5mm  |  518px * 0.715 = 370.3px ≈ 98mm */
+        transform: scale(0.715);
         transform-origin: top left;
         box-shadow: none !important;
         border: none !important;
