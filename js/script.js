@@ -231,7 +231,7 @@ async function printPreview() {
       pageHtml += '<div class="print-page">';
     }
     const cardClone = gi('idCard').cloneNode(true);
-    pageHtml += `<div class="card-wrapper">${cardClone.outerHTML}</div>`;
+    pageHtml += `<div class="card-wrapper"><span class="cut-v left"></span>${cardClone.outerHTML}<span class="cut-v right"></span></div>`;
     cardCount++;
   }
   pageHtml += '</div>';
@@ -294,7 +294,7 @@ async function printPreview() {
         grid-template-rows: repeat(2, 87.5mm);
         justify-content: center;
         align-content: center;
-        gap: 0; /* No gap makes it easier to cut with paper trimmer */
+        gap: 2px; /* 2px gap between cards for easy cutting */
       }
       @media print {
         @page { size: A4 landscape; margin: 0; }
@@ -304,21 +304,25 @@ async function printPreview() {
         body { background: #fff; }
       }
       .card-wrapper {
-        width: 54.5mm;
-        height: 87.5mm;
-        border: 0.5px dashed #ccc; /* Cutting guide */
+        width: 54.5mm;   /* ~206px */
+        height: 87.5mm;  /* ~331px */
         box-sizing: border-box;
         position: relative;
         overflow: hidden;
+        /* Crop marks as outline outside the card */
+        outline: 0.5px dashed rgba(0,0,0,0.35);
+        outline-offset: 0px;
       }
       .id-card {
         position: absolute;
         top: 0; left: 0;
-        transform: scale(0.645); /* Scale 320x518 px down to fit 54.5x87.5 mm perfectly */
+        /* 320px * 0.644 = 206px ≈ 54.5mm  |  518px * 0.644 = 333px ≈ 87.5mm */
+        transform: scale(0.644);
         transform-origin: top left;
         box-shadow: none !important;
         border: none !important;
-        border-radius: 0 !important; /* Remove border radius for easier cutting */
+        border-radius: 0 !important;
+        background: #FEF6EC !important; /* Warm cream-orange — visible on white paper */
       }
     </style>
   </head><body>
